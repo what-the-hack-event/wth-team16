@@ -9,12 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: az --version
+    - run: az login --service-principal -u b00b36bc-1580-4ee0-b26f-d2dcdd1e6b58 -p s4R8Q~gcmArojN5KbCs2Eal0CD67avu5EBs5bb8d --tenant 49f6e1af-264e-446e-9a94-efc09ca55be9
+    - run: az acount show
       # Checkout code
     - uses: actions/checkout@main
       # Log into Azure
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    # - uses: azure/login@v1
+    #   with:
+    #     creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       # Deploy ARM template
     - name: Run ARM deploy
       uses: azure/arm-deploy@v1
