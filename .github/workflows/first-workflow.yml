@@ -1,5 +1,10 @@
+on: workflow_dispatch
 jobs:
   job1:
+    runs-on: ubuntu-latest
     name: job1
+    steps:
+      - run: echo "step1"
+      - run: echo "step2"
   job2:
     name: job2
