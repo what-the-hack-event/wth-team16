@@ -2,16 +2,21 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-    "env": {
+    "teamName": {
     "defaultValue": "dev",
     "type": "String"
     },
+    "env": {
+        "defaultValue": "dev",
+        "type": "String"
+        },
+        
     "webAppName": {
-    "defaultValue": "[parameters('env')]devops-dev",
+    "defaultValue": "[concat(parameters('teamName'), parameters('env'))]",
     "type": "String"
     },
     "hostingPlanName": {
-    "defaultValue": "[parameters('env')]devops-asp",
+    "defaultValue": "[concat(parameters('teamName'), 'devops-asp-', parameters('env'))]",
     "type": "String"
     },
     "appInsightsLocation": {
@@ -19,7 +24,7 @@
     "type": "String"
     },
     "appInsightsName": {
-    "defaultValue": "[parameters('env')]devops-ai",
+    "defaultValue": "[concat(parameters('teamName'), 'devops-ai-', parameters('env'))]",
     "type": "String"
     },
     "sku": {
@@ -27,11 +32,11 @@
     "type": "String"
     },
     "registryName": {
-    "defaultValue": "[parameters('env')]devopsreg",
+    "defaultValue": "[concat(parameters('teamName'), 'devopsreg', parameters('env'))]",
     "type": "String"
     },
     "imageName": {
-    "defaultValue": "[parameters('env')]devopsimage",
+    "defaultValue": "[concat(parameters('teamName'), 'devopsimage', parameters('env'))]",
     "type": "String"
     },
     "registryLocation": {
