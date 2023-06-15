@@ -32,11 +32,11 @@
     "type": "String"
     },
     "registryName": {
-    "defaultValue": "[concat(parameters('teamName'), 'devopsreg-', parameters('env'))]",
+    "defaultValue": "[concat(parameters('teamName'), 'devopsreg', parameters('env'))]",
     "type": "String"
     },
     "imageName": {
-    "defaultValue": "[concat(parameters('teamName'), 'devopsimage-', parameters('env'))]",
+    "defaultValue": "[concat(parameters('teamName'), 'devopsimage', parameters('env'))]",
     "type": "String"
     },
     "registryLocation": {
