@@ -1,4 +1,8 @@
+#on: 
+#  issues:
+#    types: [opened]
 on: workflow_dispatch
+
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -7,4 +11,12 @@ jobs:
       - run: echo "step1"
       - run: echo "step2"
   job2:
+    runs-on: ubuntu-latest
     name: job2
+    needs: job1
+    steps:
+    - name: Hello
+      uses: mscoutermarsh/cowsays-action@master
+      with:
+        text: 'shello world!'
+        color: 'yellow'
