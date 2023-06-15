@@ -9,11 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checkout code
+
     - uses: actions/checkout@main
       # Log into Azure
     - uses: azure/login@v1
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secret.AZURE_CREDENTIALS }}
       # Deploy ARM template
     - name: Run ARM deploy
       uses: azure/arm-deploy@v1
@@ -23,4 +24,4 @@ jobs:
         template: ./ARM-Templates/container-webapp-template.json
         parameters: storageAccountType=Standard_LRS
       # output containerName variable from template
-    - run: echo ${{ steps.deploy.outputs.containerName }}
+    - run: echo ${{ steps.deploy.outputs.containerName }} 
