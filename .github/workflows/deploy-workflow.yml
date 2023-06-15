@@ -31,6 +31,7 @@ jobs:
 
   job2: 
       name: "test"
+      needs: job1
       runs-on: ubuntu-latest
       steps:
         # Checkout code
@@ -53,6 +54,7 @@ jobs:
   
   job3: 
       name: "prod"
+      needs: job2
       runs-on: ubuntu-latest
       steps:
         # Checkout code
