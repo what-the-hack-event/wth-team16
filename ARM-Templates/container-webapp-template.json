@@ -12,7 +12,7 @@
         },
         
     "webAppName": {
-    "defaultValue": "[concat(parameters('teamName'), 'devops-', parameters('env')')]",
+    "defaultValue": "[concat(parameters('teamName'), parameters('env')')]",
     "type": "String"
     },
     "hostingPlanName": {
