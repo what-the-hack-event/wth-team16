@@ -6,8 +6,13 @@
     "defaultValue": "dev",
     "type": "String"
     },
+    "env": {
+        "defaultValue": "dev",
+        "type": "String"
+        },
+        
     "webAppName": {
-    "defaultValue": "[concat(parameters('teamName'), 'devops-dev')]",
+    "defaultValue": "[concat(parameters('teamName'), parameters('env')')]",
     "type": "String"
     },
     "hostingPlanName": {
