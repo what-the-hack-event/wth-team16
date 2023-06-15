@@ -8,6 +8,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+    - run: az --version
       # Checkout code
     - uses: actions/checkout@main
       # Log into Azure
