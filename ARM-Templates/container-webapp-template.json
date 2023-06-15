@@ -16,7 +16,7 @@
     "type": "String"
     },
     "hostingPlanName": {
-    "defaultValue": "[concat(parameters('teamName'), 'devops-asp-', parameters('env'))]",
+    "defaultValue": "[concat(parameters('teamName'), 'devops-asp')]",
     "type": "String"
     },
     "appInsightsLocation": {
@@ -24,7 +24,7 @@
     "type": "String"
     },
     "appInsightsName": {
-    "defaultValue": "[concat(parameters('teamName'), 'devops-ai-', parameters('env'))]",
+    "defaultValue": "[concat(parameters('teamName'), 'devops-ai-')]",
     "type": "String"
     },
     "sku": {
@@ -32,7 +32,7 @@
     "type": "String"
     },
     "registryName": {
-    "defaultValue": "[concat(parameters('teamName'), 'devopsreg', parameters('env'))]",
+    "defaultValue": "[concat(parameters('teamName'), 'devopsreg')]",
     "type": "String"
     },
     "imageName": {
