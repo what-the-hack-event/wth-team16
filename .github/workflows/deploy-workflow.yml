@@ -22,6 +22,6 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./ARM-Templates/container-webapp-template.json
-        parameters: env=dev
+        parameters: teamName=teamssixteenwth
       # output containerName variable from template
     - run: echo ${{ steps.deploy.outputs.containerName }} 
